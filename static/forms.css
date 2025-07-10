@@ -1,0 +1,93 @@
+/* Page background and font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Center container */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Auth card */
+.card.auth-card {
+  background: #ffffff;
+  max-width: 400px;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.auth-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+.auth-header h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Body padding */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Input styles */
+.input-group-text {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #666666;
+}
+.form-control {
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0;
+  padding-left: 0;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-bottom-color: #764ba2;
+}
+
+/* Password toggle icon */
+.toggle-password {
+  cursor: pointer;
+  color: #666666;
+}
+
+/* Buttons */
+.btn-auth {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+/* Footer */
+.card-footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+}
+.card-footer a {
+  color: #764ba2;
+  font-weight: 500;
+  text-decoration: none;
+}
+.card-footer a:hover {
+  text-decoration: underline;
+}

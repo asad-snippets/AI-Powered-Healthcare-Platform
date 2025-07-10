@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'rob';
+  src: url('/static/Roboto-Regular.ttf');
+}
+
+/* Custom CSS for the Vertical Navbar */
+.vertical-navbar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  background-color: #000000;
+  padding: 10px 10px;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+/* Add margin and make text interactive for the paragraph */
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  transition: color 0.3s ease, transform 0.2s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+p:hover {
+  color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Styling for vertical navbar links */
+.vertical-navbar .nav-link {
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+.vertical-navbar .nav-link i {
+  margin-right: 10px;
+}
+.vertical-navbar .nav-link:hover {
+  background-color: #0056b3;
+  color: white;
+  border-radius: 8px;
+}
+.vertical-navbar .nav-link.active {
+  background-color: #004085;
+  color: white;
+  border-radius: 8px;
+}
+.vertical-navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-container {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.logo-section a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.logo-section i {
+  font-size: 2rem;
+  color: white;
+  margin-right: 10px;
+}
+.logo-section h4 {
+  color: white;
+  margin: 0;
+}
+hr {
+  border: 1px solid #ffffff;
+  margin: 5px 0;
+}
+
+/* Styling for suggested symptoms list */
+.suggestions-list .list-group-item {
+  background-color: #f8f9fa;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.suggestions-list .list-group-item:hover {
+  background-color:rgb(143, 149, 156);
+  color: white;
+}
+
+/* Additional styles */
+.icon {
+  width: 50px;
+  border-radius: 40px;
+}

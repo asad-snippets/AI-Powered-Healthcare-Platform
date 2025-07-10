@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Prediction History</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 10px;
+      margin: 0;
+      padding: 0 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16px;
+      margin: 12px 0;
+    }
+    .userinfo {
+      margin-bottom: 16px;
+    }
+    .userinfo p {
+      margin: 2px 0;
+    }
+    .userinfo strong {
+      display: inline-block;
+      width: 70px;
+    }
+
+    /* Card styles */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px;
+      margin-bottom: 8px;
+      page-break-inside: avoid;
+    }
+    /* Alternate background for every other card */
+    .card:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    .card h2 {
+      font-size: 12px;
+      margin: 0 0 6px;
+      color: #2E7D32;  /* darker green */
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 4px;
+    }
+    .card p {
+      margin: 4px 0;
+      line-height: 1.2;
+    }
+    .card p strong {
+      display: inline-block;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prediction History</h1>
+
+  <div class="userinfo">
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+  </div>
+
+  {% for report in user_reports %}
+    <div class="card">
+      <h2>{{ report.created_at|date:"Y-m-d H:i" }}</h2>
+
+      <p><strong>Symptoms:</strong> {{ report.symptoms }}</p>
+      <p><strong>Diagnosis:</strong> {{ report.diagnosis }}</p>
+      <p><strong>Description:</strong> {{ report.description }}</p>
+      <p><strong>Precautions:</strong> {{ report.precautions }}</p>
+      <p><strong>Medications:</strong> {{ report.medications }}</p>
+      <p><strong>Diet:</strong> {{ report.diet }}</p>
+      <p><strong>Workout:</strong> {{ report.workout }}</p>
+      <br><br>
+    </div>
+  {% endfor %}
+
+</body>
+</html>

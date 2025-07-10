@@ -1,0 +1,84 @@
+  /* Custom error message fade effect */
+        .alert {
+            transition: opacity 3s ease;
+        }
+
+        .alert.hide {
+            opacity: 0;
+        }
+
+        @font-face {
+    font-family: 'rob';
+    src: url('/static/Roboto-Regular.ttf');
+}
+
+body {
+    background: url('/static/bg(1).jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-buttons {
+    margin-left: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.nav-pills .nav-link {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: white;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+.alert {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.alert.hide {
+    opacity: 0;
+}
+
+.text-danger {
+    font-size: 12px;
+    margin-top: 5px;
+}

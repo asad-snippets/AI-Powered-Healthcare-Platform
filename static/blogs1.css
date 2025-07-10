@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'rob';
+    src: url('/static/Roboto-Regular.ttf');
+    }
+    
+    
+    body {
+    font-family: rob;
+    background-color: #001f3f; /* Dark blue */
+    color: white; /* Optional: Makes text readable on dark background */
+    
+}
+
+ 
+.container {
+    max-width: 100%;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+.health-text {
+    margin-top: 50px;
+    color: white;
+    margin-left: 40px;
+}
+.navbar-buttons {
+    margin-left: 20px;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+@media (max-width: 768px) {
+    .form-wrapper {
+        justify-content: center;
+    }
+}
+/* Navbar Hover Effects */
+.nav-pills .nav-link {
+    color: white;
+    transition: all 0.3s ease;
+}
+.nav-pills .nav-link:hover {
+    background-color: white;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn-outline-light:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+    .content-container {
+        margin-left: 240px;
+        padding: 20px;
+    }
+   .card {
+    background-color: #0d3b66; /* Softer dark blue */
+    color: white;
+}
+
+    
+    .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 40px;
+    }
+    

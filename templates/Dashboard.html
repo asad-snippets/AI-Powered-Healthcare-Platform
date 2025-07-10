@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Health Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/Dashboard.css">
+    
+</head>
+<body style="font-family: rob;">
+    <!-- Vertical Navbar -->
+    <div class="vertical-navbar">
+        <div class="logo-section">
+            <a href="/">
+                <div class="ms-4 me-4">
+                    <img src="/static/logo2.jpg" alt="Medical Logo" class="icon">
+                </div>
+                <h4>Health Dashboard</h4>
+            </a>
+        </div>
+        <hr>
+        <br>
+        <ul class="nav flex-column" id="navbar">
+            <li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/Dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Disease_Prediction/"><i class="fas fa-diagnoses"></i> Disease Prediction</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Report/"><i class="fas fa-file-alt"></i> Report Generation</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Blogs/"><i class="fas fa-blog"></i> Health Blogs</a></li>
+            <hr>
+            <li class="nav-item"><a class="nav-link" href="/Profile_Management/"><i class="fas fa-user-circle"></i> Profile Management</a></li>
+            <li class="nav-item"><a class="nav-link" href="/User_Data/"><i class="fas fa-database"></i> User Data</a></li>            
+            <li class="nav-item"><a class="nav-link" href="/chatbot/"><i class="fas fa-comments"></i> Chatbot</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Logout/"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+        </ul>
+    </div>
+    <div>
+        <h1 class="heade">Health Dashboard</h1>
+    </div>
+    <!-- Section with Paragraph and Buttons -->
+    <div class="contrl">
+        <h3>AI-Powered Healthcare Platform</h3>
+        <p>
+            Our AI-Powered Healthcare Assistant provides personalized health insights.<br>  
+            This platform leverages advanced AI to optimize wellness and empower individuals <br>  
+            to make informed health decisions effortlessly.<br>  
+            It analyzes user data, including symptoms to provide tailored recommendations.<br>  
+            With real-time insights and interactive features, users can track their health and improve their lifestyle proactively.
+        </p>
+        <a href="/Recommendations_Dashboard/"><button class="btn btn-recommendations">Health Recommendations</button></a>
+        <br>
+        <br>
+        <!-- <button class="btn btn-analysis">Health Analysis</button> -->
+    </div>
+    
+    <div>
+        <video class="video" autoplay muted loop>
+            <source src="/static/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/dashboard.js"></script>
+    
+</body>
+</html>

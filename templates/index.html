@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% comment %} <title>{% block title %}{% endblock title %}</title> {% endcomment %}
+     {% load static %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    
+</head>
+<body>
+    <!-- In base.html or before closing <head> -->
+    {% csrf_token %}
+    <script>
+        document.cookie = "csrftoken={{ csrf_token }}";
+    </script>
+     
+
+    <!-- Navbar Section -->
+<!-- Navbar Section -->
+<div class="container">
+    <div class="row">
+        <div class="d-flex align-items-center bg-primary w-100 py-2">
+            <div class="ms-4 me-4">
+                <img src="/static/logo2.jpg" alt="Medical Logo" class="icon">
+            </div>
+            <h4 class="text-white me-auto mb-0">AI-Powered HealthCare Platform</h4>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Dashboard/">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Disease_Prediction/">Disease Prediction</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Report/">Report Generation</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Blogs1/">Health Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/User_Data/">User Data</a></li>
+
+            </ul>
+
+            <div class="navbar-buttons">
+                {% if user.is_authenticated %}
+                    <a href="/Logout/"><button class="btn btn-danger me-4">Logout</button></a>
+                {% else %}
+                    <a href="/Login/"><button class="btn btn-outline-light me-3">Login</button></a>
+                    <a href="/SignUp/"><button class="btn btn-light me-4">Sign Up</button></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Health Text -->
+    <div class="container" style="margin-top:90px; margin-left: 100px; color:white;">
+        <h1 class="health-text">AI-Powered Healthcare Assistant <br> And Health Optimization Platform</h1>
+        <h4 style="margin-top: 20px;Margin-bottom: 20px; margin-left:40px">
+            <strong>Your Health, <span style="color:rgb(78, 255, 108);">Our Responsibility!</span></strong>
+            <br>
+            <span style="font-size: 1.1em;Margin-top:20px;">We're here to empower your wellness journey. 🚀</span>
+        </h4>
+        <p class="health-text" style="font-size: 1.20rem;">
+            Prevent potential health issues and effectively manage your health. <br>
+            The AI-powered healthcare assistant offers personalized health insights.<br>
+            Smart recommendations tailored to individual needs. It seamlessly integrates with <br>
+            Health optimization tools to enhance overall well-being and preventive care.
+        </p>
+        
+        <!-- Get Started Button -->
+        <a href="/Dashboard/">
+            <button id="getStartedBtn" class="mt-5 ms-5">Get Started →</button>
+        </a>
+    </div>
+
+    <!-- Chatbot Icon -->
+     
+    <div id="chatbotIcon" onclick="toggleChatWindow()">
+        🤖
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chatWindow">
+        <div id="chatHeader">
+            <span>💊 Health Chatbot</span>
+            <button onclick="closeChatWindow()">✖</button>
+        </div>
+        <div id="chatBox">
+            <div class="bot-message">Welcome! How can I assist you today?</div>
+        </div>
+        <div id="chatFooter">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    
+
+    
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/bot.js"></script>
+
+    
+
+</body>
+
+</html>

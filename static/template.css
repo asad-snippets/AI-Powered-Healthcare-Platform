@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; font-size: 20px; }
+        
+        .section { margin-bottom: 15px;
+            
+        }
+        hr{
+            color:rgb(62, 107, 185);
+            border: 1px double rgb(62, 107, 185);
+        }
+        

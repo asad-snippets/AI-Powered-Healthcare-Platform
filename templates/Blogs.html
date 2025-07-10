@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Blogs</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'Blogs.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Vertical Navbar -->
+    <div class="vertical-navbar">
+        <div class="logo-section">
+            <a href="/">
+                <div class="ms-4 me-4">
+                    <img src="{% static 'logo2.jpg' %}" alt="Medical Logo" class="icon">
+                </div>
+                <h4>Health Blogs</h4>
+            </a>
+        </div>
+        <hr>
+        <ul class="nav flex-column" id="navbar">
+            <li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Disease_Prediction/"><i class="fas fa-diagnoses"></i> Disease Prediction</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Report/"><i class="fas fa-file-alt"></i> Report Generation</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/Blogs/"><i class="fas fa-blog"></i> Health Blogs</a></li>
+            <hr>
+            <li class="nav-item"><a class="nav-link" href="/Profile_Management/"><i class="fas fa-user-circle"></i> Profile Management</a></li>
+            <li class="nav-item"><a class="nav-link" href="/User_Data/"><i class="fas fa-database"></i> User Data</a></li>            
+            <li class="nav-item"><a class="nav-link" href="/chatbot/"><i class="fas fa-comments"></i> Chatbot</a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <div class="container">
+            <div>
+                <h1 class="heade">Health Blogs</h1>
+            </div>
+
+            <!-- Blog Section -->
+<div class="row">
+    <!-- Blog Cards -->
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(1)">
+            <h2>Protecting Your Eyes: Tips and Medication for Eye Care</h2>
+            <p>Discover essential habits and treatments to maintain optimal eye health, including nutrition and protective measures. Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(2)">
+            <h2>Taking Care of Your Heart: Essential Tips for Cardiovascular Health</h2>
+            <p>Learn about lifestyle changes and preventive measures to promote heart health and reduce the risk of cardiovascular diseases Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(3)">
+            <h2>Maintaining Healthy Bones: Preventing Osteoporosis and Joint Pain</h2>
+            <p>Explore strategies to strengthen bones and joints, preventing conditions like osteoporosis and alleviating joint discomfort Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(4)">
+            <h2>Lung Health: How to Keep Your Lungs Strong and Healthy</h2>
+            <p>Understand practices to enhance lung function, prevent respiratory issues, and maintain overall pulmonary health Click to read more...</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(5)">
+            <h2>Boosting Your Immune System Naturally: Diet, Exercise, and Lifestyle</h2>
+            <p>Discover natural ways to strengthen your immune system through balanced nutrition, regular physical activity, and healthy habits Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(6)">
+            <h2>Mental Health: How to Achieve Emotional and Psychological Well-Being</h2>
+            <p>Learn effective techniques to manage stress, improve emotional health, and enhance psychological well-being Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(7)">
+            <h2>Taking Care of Your Skin: Tips for Healthy, Glowing Skin</h2>
+            <p>Explore skincare routines and lifestyle choices that promote radiant and healthy skin Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(8)">
+            <h2>The Importance of Hydration: How Water Impacts Your Health</h2>
+            <p>Understand the critical role of water in maintaining bodily functions and overall health Click to read more...</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(9)">
+            <h2>Sleep and Its Impact on Overall Health</h2>
+            <p>Learn about the significance of quality sleep and its effects on physical and mental health Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(10)">
+            <h2>Understanding Diabetes: Prevention, Treatment, and Healthy Lifestyle Choices</h2>
+            <p>Gain insights into managing and preventing diabetes through informed lifestyle decisions Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(11)">
+            <h2>Oral Health: How to Keep Your Teeth and Gums Healthy</h2>
+            <p>Discover effective oral hygiene practices to maintain healthy teeth and gums Click to read more...</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="blog-card" onclick="openBlog(12)">
+            <h2>The Role of Fiber in Your Diet: Benefits for Digestion and Health</h2>
+            <p>Understand the importance of dietary fiber in promoting digestive health and overall well-being Click to read more...</p>
+        </div>
+    </div>
+</div>
+
+<!-- Full Blog Content (Initially Hidden) -->
+<div id="blogContent" class="blog-content">
+    <!-- Blog 1: Protecting Your Eyes: Tips and Medication for Eye Care -->
+    <div id="blog1" class="blog-detail">
+        <h2>Protecting Your Eyes: Tips and Medication for Eye Care</h2>
+        <h3>Introduction: Why Eye Health is Important</h3>
+        <p>Your eyes are essential for daily activities, and protecting your vision should be a priority. Learn how to care for your eyes through daily habits and proper nutrition. </p>
+        <h3>Common Eye Conditions</h3>
+        <ul>
+            <li><strong>Cataracts</strong>: A clouding of the lens that can lead to vision loss.</li>
+            <li><strong>Glaucoma</strong>: A condition that damages the optic nerve.</li>
+            <li><strong>Macular Degeneration</strong>: Affects central vision, leading to blindness.</li>
+            <li><strong>Dry Eye Syndrome</strong>: Insufficient tear production causing irritation.</li>
+        </ul>
+        <h3>Protecting Your Eyes: Simple Habits</h3>
+        <ul>
+            <li><strong>Wear Sunglasses</strong> with UV protection.</li>
+            <li><strong>Limit Screen Time</strong> using the 20-20-20 rule.</li>
+            <li><strong>Proper Lighting</strong> when reading or working.</li>
+        </ul>
+        <h3>Eye-Healthy Diet</h3>
+        <ul>
+            <li><strong>Vitamin A</strong>: Found in carrots, spinach, and sweet potatoes.</li>
+            <li><strong>Vitamin C</strong>: Found in citrus fruits and strawberries.</li>
+            <li><strong>Omega-3s</strong>: Found in fatty fish like salmon.</li>
+        </ul>
+        <h3>Medications for Eye Health</h3>
+        <p>Sometimes medications like eye drops or prescriptions are needed for eye conditions like glaucoma and dry eye syndrome.</p>
+        <footer>Posted on January 12, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 2: Taking Care of Your Heart: Essential Tips for Cardiovascular Health -->
+    <div id="blog2" class="blog-detail">
+        <h2>Taking Care of Your Heart: Essential Tips for Cardiovascular Health</h2>
+        <h3>Understanding Heart Disease</h3>
+        <p>Heart disease refers to various conditions that affect the heart's structure and function. The most common form of heart disease is coronary artery disease, caused by plaque buildup in the heart’s arteries, leading to reduced blood flow.</p>
+        <h3>Exercise for Heart Health</h3>
+        <ul>
+            <li>Aim for 30 minutes of moderate exercise daily to improve circulation and reduce blood pressure.</li>
+            <li>Aerobic exercises like walking and cycling promote heart health.</li>
+            <li>Strength training exercises can also benefit heart function.</li>
+        </ul>
+        <h3>Dietary Tips for a Healthy Heart</h3>
+        <ul>
+            <li>Eat plenty of fruits and vegetables.</li>
+            <li>Limit saturated fats from fatty cuts of meat and processed foods.</li>
+            <li>Include whole grains like brown rice and oats to lower cholesterol.</li>
+            <li>Consume healthy fats such as olive oil and avocados.</li>
+        </ul>
+        <h3>Signs of Heart Disease</h3>
+        <ul>
+            <li>Chest pain or discomfort</li>
+            <li>Shortness of breath</li>
+            <li>Dizziness or lightheadedness</li>
+        </ul>
+        <h3>Preventive Medication</h3>
+        <p>In some cases, medications like statins and blood pressure meds can help reduce the risk of heart disease.</p>
+        <footer>Posted on January 13, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 3: Maintaining Healthy Bones: Preventing Osteoporosis and Joint Pain -->
+    <div id="blog3" class="blog-detail">
+        <h2>Maintaining Healthy Bones: Preventing Osteoporosis and Joint Pain</h2>
+        <h3>Understanding Osteoporosis</h3>
+        <p>Osteoporosis is a condition characterized by weakened bones, increasing the risk of fractures. It often develops without symptoms, making prevention crucial.</p>
+        <h3>Importance of Weight-Bearing Exercises</h3>
+        <p>Engaging in weight-bearing exercises like walking, jogging, and strength training helps build and maintain bone density.</p>
+        <h3>Role of Nutrition in Bone Health</h3>
+        <ul>
+            <li><strong>Calcium</strong>: Essential for bone strength; found in dairy products, leafy greens, and fortified foods.</li>
+            <li><strong>Vitamin D</strong>: Aids in calcium absorption; obtained through sunlight exposure and fortified foods.</li>
+            <li><strong>Protein</strong>: Supports bone structure; found in meats, legumes, and nuts.</li>
+        </ul>
+        <h3>Preventing Joint Pain</h3>
+        <ul>
+            <li>Maintain a healthy weight to reduce stress on joints.</li>
+            <li>Practice proper posture and body mechanics.</li>
+            <li>Stay active to keep joints flexible.</li>
+        </ul>
+        <footer>Posted on January 14, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 4: Lung Health: How to Keep Your Lungs Strong and Healthy -->
+    <div id="blog4" class="blog-detail">
+        <h2>Lung Health: How to Keep Your Lungs Strong and Healthy</h2>
+                <h3>Understanding Lung Function</h3>
+        <p>Your lungs play a vital role in delivering oxygen to the body and removing carbon dioxide. Maintaining lung health is essential for overall well-being.</p>
+        <h3>How to Keep Your Lungs Healthy</h3>
+        <ul>
+            <li>Avoid smoking and exposure to secondhand smoke.</li>
+            <li>Engage in regular physical activity like walking, swimming, or cycling to increase lung capacity.</li>
+            <li>Practice deep breathing exercises to improve lung efficiency.</li>
+        </ul>
+        <h3>Air Quality and Lung Health</h3>
+        <ul>
+            <li>Avoid exposure to polluted air. Consider wearing a mask if necessary.</li>
+            <li>Use air purifiers in your home to filter harmful particles.</li>
+            <li>Ventilate your home regularly to ensure clean air circulation.</li>
+        </ul>
+        <footer>Posted on January 15, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 5: Boosting Your Immune System Naturally: Diet, Exercise, and Lifestyle -->
+    <div id="blog5" class="blog-detail">
+        <h2>Boosting Your Immune System Naturally: Diet, Exercise, and Lifestyle</h2>
+        <h3>Introduction to the Immune System</h3>
+        <p>The immune system is your body's defense against harmful invaders. Strengthening it can help you fight infections and illnesses more effectively.</p>
+        <h3>Dietary Tips for Immune Health</h3>
+        <ul>
+            <li>Consume foods rich in vitamin C like citrus fruits and bell peppers to boost immune function.</li>
+            <li>Include zinc-rich foods such as nuts, seeds, and legumes to support immune cell function.</li>
+            <li>Incorporate antioxidants from fruits like blueberries and spinach to combat free radicals.</li>
+        </ul>
+        <h3>Exercise for Immunity</h3>
+        <p>Regular moderate-intensity exercise such as brisk walking or yoga can boost immune health by improving circulation and reducing stress.</p>
+        <h3>Other Lifestyle Tips</h3>
+        <ul>
+            <li>Get adequate sleep, aiming for 7-8 hours each night to allow the immune system to recover.</li>
+            <li>Manage stress through mindfulness or relaxation techniques like meditation or deep breathing.</li>
+            <li>Maintain a healthy weight to reduce the strain on your immune system.</li>
+        </ul>
+        <footer>Posted on January 16, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 6: Mental Health: How to Achieve Emotional and Psychological Well-Being -->
+    <div id="blog6" class="blog-detail">
+        <h2>Mental Health: How to Achieve Emotional and Psychological Well-Being</h2>
+        <h3>The Importance of Mental Health</h3>
+        <p>Good mental health is just as important as physical health. It affects how we think, feel, and act, influencing every part of our lives.</p>
+        <h3>Self-Care Practices for Mental Well-Being</h3>
+        <ul>
+            <li>Engage in regular physical activity to release endorphins and reduce stress.</li>
+            <li>Practice mindfulness and meditation to stay grounded and focused.</li>
+            <li>Maintain a balanced diet and stay hydrated for overall well-being.</li>
+        </ul>
+        <h3>Building Resilience</h3>
+        <p>Learn to manage stress effectively by developing coping strategies, such as journaling, talking to a friend, or seeking professional support.</p>
+        <h3>Seeking Professional Help</h3>
+        <p>If you're experiencing prolonged feelings of sadness or anxiety, consider reaching out to a mental health professional for guidance and support.</p>
+        <footer>Posted on January 17, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 7: Taking Care of Your Skin: Tips for Healthy, Glowing Skin -->
+    <div id="blog7" class="blog-detail">
+        <h2>Taking Care of Your Skin: Tips for Healthy, Glowing Skin</h2>
+        <h3>Introduction: Why Skin Health Matters</h3>
+        <p>Your skin is your body's largest organ and serves as a protective barrier. Taking care of it can enhance your appearance and prevent various skin conditions.</p>
+        <h3>Daily Skin Care Routine</h3>
+        <ul>
+            <li>Cleanse your skin gently with a mild, non-drying cleanser.</li>
+            <li>Moisturize daily to maintain hydration and prevent dryness.</li>
+            <li>Use sunscreen to protect your skin from harmful UV rays, even on cloudy days.</li>
+        </ul>
+        <h3>Diet for Skin Health</h3>
+        <ul>
+            <li>Eat foods rich in antioxidants like berries and green leafy vegetables to fight free radicals.</li>
+            <li>Consume omega-3 fatty acids from fish or flaxseeds to keep your skin supple.</li>
+            <li>Stay hydrated by drinking enough water to keep your skin plump and radiant.</li>
+        </ul>
+        <h3>Common Skin Problems and How to Address Them</h3>
+        <ul>
+            <li>Acne: Use products with salicylic acid or benzoyl peroxide for gentle acne treatment.</li>
+            <li>Dry Skin: Apply a richer moisturizer during the winter months and consider using a humidifier.</li>
+        </ul>
+        <footer>Posted on January 18, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 8: The Importance of Hydration: How Water Impacts Your Health -->
+    <div id="blog8" class="blog-detail">
+        <h2>The Importance of Hydration: How Water Impacts Your Health</h2>
+        <h3>Why Hydration Matters</h3>
+        <p>Water is essential for almost every bodily function. Staying hydrated helps regulate body temperature, supports digestion, and aids in detoxification.</p>
+        <h3>How Much Water Should You Drink?</h3>
+        <p>The amount of water needed varies by individual, but a general recommendation is 8-10 cups per day. Adjust this based on your activity level and climate.</p>
+        <h3>Benefits of Staying Hydrated</h3>
+        <ul>
+            <li>Improved skin health and reduced signs of aging.</li>
+            <li>Enhanced digestion and better nutrient absorption.</li>
+            <li>Better cognitive function and mood stabilization.</li>
+        </ul>
+        <h3>Foods to Help You Stay Hydrated</h3>
+        <ul>
+            <li>Fruits like watermelon, cucumbers, and oranges have high water content.</li>
+            <li>Soups and broths are excellent sources of hydration.</li>
+        </ul>
+        <footer>Posted on January 19, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 9: Sleep and Its Impact on Overall Health -->
+    <div id="blog9" class="blog-detail">
+        <h2>Sleep and Its Impact on Overall Health</h2>
+        <h3>The Importance of Sleep</h3>
+        <p>Sleep is crucial for physical and mental recovery. During sleep, the body repairs itself, consolidates memories, and detoxifies the brain.</p>
+        <h3>How Much Sleep Do You Need?</h3>
+        <p>Adults typically require 7-9 hours of sleep per night, while children and teenagers need more.</p>
+        <h3>Tips for Better Sleep</h3>
+        <ul>
+            <li>Establish a consistent sleep schedule, even on weekends.</li>
+            <li>Limit screen time before bed to improve the quality of your sleep.</li>
+            <li>Create a relaxing bedtime routine, such as reading or practicing meditation.</li>
+        </ul>
+        <h3>Consequences of Sleep Deprivation</h3>
+        <ul>
+            <li>Increased risk of chronic conditions like heart disease and diabetes.</li>
+            <li>Decreased cognitive function and memory.</li>
+            <li>Weakened immune system, making you more susceptible to illness.</li>
+        </ul>
+        <footer>Posted on January 20, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 10: Understanding Diabetes: Prevention, Treatment, and Healthy Lifestyle Choices -->
+    <div id="blog10" class="blog-detail">
+        <h2>Understanding Diabetes: Prevention, Treatment, and Healthy Lifestyle Choices</h2>
+        <h3>What is Diabetes?</h3>
+        <p>Diabetes is a chronic condition that affects how your body processes blood sugar (glucose). There are two main types: Type 1 and Type 2.</p>
+        <h3>Prevention Strategies</h3>
+        <ul>
+            <li>Maintain a healthy weight through regular exercise and a balanced diet.</li>
+            <li>Limit processed sugar and refined carbohydrates in your diet.</li>
+            <li>Monitor blood sugar levels regularly to detect any early signs of diabetes.</li>
+        </ul>
+        <h3>Treatment Options for Diabetes</h3>
+        <ul>
+            <li>For Type 1 diabetes, insulin therapy is necessary to regulate blood sugar.</li>
+            <li>For Type 2 diabetes, lifestyle changes and medications can help control blood sugar levels.</li>
+        </ul>
+        <footer>Posted on January 21, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 11: Oral Health: How to Keep Your Teeth and Gums Healthy -->
+    <div id="blog11" class="blog-detail">
+        <h2>Oral Health: How to Keep Your Teeth and Gums Healthy</h2>
+        <h3>Importance of Oral Hygiene</h3>
+        <p>Oral hygiene is essential for preventing cavities, gum disease, and bad breath. Consistent care helps maintain overall health and well-being.</p>
+        <h3>Essential Oral Care Practices</h3>
+        <ul>
+            <li>Brush your teeth twice a day with fluoride toothpaste.</li>
+            <li>Floss daily to remove plaque and food particles between teeth.</li>
+            <li>Visit your dentist regularly for checkups and cleanings.</li>
+        </ul>
+        <h3>Diet for Healthy Teeth and Gums</h3>
+        <ul>
+            <li>Limit sugary foods and drinks that contribute to plaque buildup.</li>
+            <li>Eat foods rich in calcium, like dairy and leafy greens, to strengthen teeth.</li>
+            <li>Drink plenty of water to help rinse away bacteria and food particles.</li>
+        </ul>
+        <footer>Posted on January 22, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+
+    <!-- Blog 12: The Role of Fiber in Your Diet: Benefits for Digestion and Health -->
+    <div id="blog12" class="blog-detail">
+        <h2>The Role of Fiber in Your Diet: Benefits for Digestion and Health</h2>
+        <h3>Understanding Fiber</h3>
+        <p>Fiber is an essential nutrient that supports digestion, helps maintain a healthy weight, and lowers the risk of chronic diseases like heart disease.</p>
+        <h3>Types of Fiber</h3>
+        <ul>
+            <li><strong>Soluble Fiber</strong>: Found in oats, beans, and fruits, it helps lower cholesterol and stabilize blood sugar.</li>
+            <li><strong>Insoluble Fiber</strong>: Found in whole grains and vegetables, it aids in digestion and prevents constipation.</li>
+        </ul>
+        <h3>How to Include More Fiber in Your Diet</h3>
+        <ul>
+            <li>Eat whole grains, legumes, and a variety of fruits and vegetables.</li>
+            <li>Choose high-fiber snacks like nuts, seeds, and whole-grain crackers.</li>
+        </ul>
+        <footer>Posted on January 23, 2025</footer>
+        <button onclick="closeBlog()">Close</button>
+    </div>
+</div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openBlog(blogId) {
+            document.getElementById('blogContent').style.display = 'block';
+            document.querySelectorAll('.blog-detail').forEach((blog) => blog.style.display = 'none');
+            document.getElementById('blog' + blogId).style.display = 'block';
+        }
+
+        function closeBlog() {
+            document.getElementById('blogContent').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

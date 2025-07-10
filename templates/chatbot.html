@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'chatbot.css' %}" rel="stylesheet"/>
+</head>
+<body style="font-family: rob;">
+
+<!-- Vertical Navbar -->
+<div class="vertical-navbar">
+    <div class="logo-section">
+        <a href="/">
+            <div class="ms-4 me-4">
+                <img src="/static/logo2.jpg" alt="Medical Logo" class="icon">
+            </div>
+            <h4>AI Doctor</h4>
+        </a>
+    </div>
+    <hr><br>
+    <ul class="nav flex-column" id="navbar">
+        <li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/Dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="/Disease_Prediction/"><i class="fas fa-diagnoses"></i> Disease Prediction</a></li>
+        <li class="nav-item"><a class="nav-link" href="/Report/"><i class="fas fa-file-alt"></i> Report Generation</a></li>
+        <li class="nav-item"><a class="nav-link" href="/Blogs/"><i class="fas fa-blog"></i> Health Blogs</a></li>
+        <hr>
+        <li class="nav-item"><a class="nav-link" href="/Profile_Management/"><i class="fas fa-user-circle"></i> Profile Management</a></li>
+        <li class="nav-item"><a class="nav-link" href="/User_Data/"><i class="fas fa-database"></i> User Data</a></li>            
+        <li class="nav-item"><a class="nav-link active" href="/chatbot/"><i class="fas fa-comments"></i> Chatbot</a></li>
+        <li class="nav-item"><a class="nav-link" href="/Logout/"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+</div>
+
+<!-- Content Section -->
+<div class="content-container">
+    <div>
+        <h1 class="heade">AI Doctor</h1>
+    </div>
+
+    <!-- Chat Window (Updated) -->
+    <div id="chatWindow" class="shadow-lg rounded">
+        <div id="chatHeader" class="d-flex justify-content-between align-items-center p-3 bg-primary text-white">
+            <span><i class="fas fa-robot me-2"></i> Health Chatbot</span>
+            <button class="btn btn-sm btn-light" onclick="closeChatWindow()">&times;</button>
+        </div>
+
+        <!-- Chat Box (Messages appended from bottom to top) -->
+        <div id="chat-box" class="p-3 bg-light" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column;">
+            <!-- Initial greeting message -->
+            <div class="bot-message">👋 Hello, how can I assist you today?</div>
+        </div>
+
+        <!-- Input and Send Button -->
+        <div id="chatFooter" class="p-3 d-flex gap-2">
+            <input type="text" id="chat-input" class="form-control" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button id="sendBtn" class="btn btn-success" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Chatbot Icon -->
+<div id="chatbotIcon" onclick="toggleChatWindow()">
+    <i class="fas fa-comment-medical"></i>
+</div>
+
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/chatbot.js"></script>
+
+</body>
+</html>

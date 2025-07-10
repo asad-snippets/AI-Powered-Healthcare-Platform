@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Custom CSS for the Vertical Navbar */
+.vertical-navbar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    background-color: #000000;
+    padding: 10px 10px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+.vertical-navbar .nav-link {
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+.vertical-navbar .nav-link i {
+    margin-right: 10px;
+}
+.vertical-navbar .nav-link:hover {
+    background-color: #0056b3;
+    color: white;
+    border-radius: 8px;
+}
+.vertical-navbar .nav-link.active {
+    background-color: #004085;
+    color: white;
+    border-radius: 8px;
+}
+.vertical-navbar ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.content-container {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.logo-section a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.logo-section i {
+    font-size: 2rem;
+    color: white;
+    margin-right: 10px;
+}
+.logo-section h4 {
+    color: white;
+    margin: 0;
+}
+
+hr {
+    border: 1px solid #ffffff;
+    margin: 5px 0;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.heade {
+    background: rgb(9, 67, 130);
+    height: 100px;
+    color: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Styling for the Profile Form */
+.profile-section {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure width includes padding */
+}
+
+.form-group input[type="file"] {
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.save-btn {
+    background-color: #004085;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .vertical-navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .content-container {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
+
+/* Custom error message fade effect */
+
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-group {
+    position: relative;
+    animation: hideError 2s forwards;
+    margin-bottom: 20px;
+}
+.form-group .error-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+    display: none; /* Initially hidden */
+}
+
+/* Custom error message fade effect */

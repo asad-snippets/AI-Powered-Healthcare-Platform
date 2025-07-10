@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/blogs1.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="container">
+        <div class="row">
+            <div class="d-flex align-items-center bg-primary w-100 py-2">
+                <div class="ms-4 me-4">
+                    <img src="/static/logo2.jpg" alt="Medical Logo" class="icon">
+                </div>
+                <h4 class="text-white me-auto mb-0">AI-Powered HealthCare Platform</h4>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Dashboard/">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Disease_Prediction/">Disease Prediction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Report/">Report Generation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Blogs1/">Health Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/User_Data/">User Data</a></li>
+                </ul>
+                <div class="navbar-buttons">
+                    <a href="/Login/"><button class="btn btn-outline-light me-3">Login</button></a>
+                    <a href="/SignUp/"><button class="btn btn-light me-4">Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    <div class="content-container">
+        <div class="container">
+            <div>
+                <h1 class="heade">Health Blogs</h1>
+            </div>
+            <!-- Blog Section -->
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <article class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">The Importance of Regular Health Check-Ups</h2>
+                            <p class="card-text">
+                                Regular health check-ups are essential for maintaining good health and preventing potential illnesses. By routinely monitoring vital signs, blood pressure, cholesterol levels, and more, you can catch health issues early and take proactive steps to address them. 
+                            </p>
+                            <p class="card-text">
+                                Doctors recommend annual screenings for conditions such as diabetes, heart disease, and certain cancers based on age and family history. Besides physical health, regular check-ups can help identify mental health concerns, enabling timely intervention and support.
+                            </p>
+                            <p class="card-text">
+                                Remember, prevention is always better than cure. Schedule your health check-up today to stay on top of your well-being.
+                            </p>
+                            <footer class="blockquote-footer">Posted on <cite title="Source Title">January 12, 2025</cite></footer>
+                        </div>
+                    </article>
+                    <article class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Managing Stress and Mental Health in a Fast-Paced World</h2>
+                            <p>With increasing work pressure and social commitments, managing stress is crucial for mental well-being. Simple practices like mindfulness, exercise, and regular breaks can help maintain balance.</p>
+                            <footer class="blockquote-footer">Posted on March 10, 2025</footer>
+                        </div>
+                    </article>
+                    
+                    <article class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">The Impact of Digital Screens on Eye Health</h2>
+                            <p>Excessive screen time can cause eye strain, dryness, and headaches. The 20-20-20 rule and proper screen positioning can help reduce these effects.</p>
+                            <footer class="blockquote-footer">Posted on March 18, 2025</footer>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add click event to update the active class
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    // Remove active class from all links
+                    navLinks.forEach((nav) => nav.classList.remove("active"));
+                    // Add active class to the clicked link
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

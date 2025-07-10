@@ -1,0 +1,69 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.vertical-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.vertical-navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.vertical-navbar .logo-section {
+    text-align: center;
+}
+
+.vertical-navbar .logo-section img.icon {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 20px;
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #495057;
+}
+
+.content-container {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+.container h1.heade {
+    margin-bottom: 30px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+form h2 {
+    margin-top: 30px;
+    color: #495057;
+}
+
+form label {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+form input, form textarea, form select {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+button.btn-primary {
+    margin-top: 20px;
+}

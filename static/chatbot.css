@@ -1,0 +1,280 @@
+
+@font-face {
+font-family: 'rob';
+src: url('/static/Roboto-Regular.ttf');
+}
+/* Custom CSS for the Vertical Navbar */
+.vertical-navbar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    background-color: #000000;
+    padding: 10px 10px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+/* Add margin and make text interactive for the paragraph */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    /* margin-left: 20px; Add left margin */
+    line-height: 1.6; /* Improve readability */
+    text-align: justify; /* Align text for a cleaner look */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    word-wrap: break-word; /* Ensure long words break onto the next line */
+    overflow-wrap: break-word; /* Add fallback for breaking words */
+    white-space: normal; /* Allow text to wrap normally */
+}
+
+p:hover {
+    color: #0056b3; /* Change text color on hover */
+    transform: scale(1.02); /* Slightly enlarge text on hover */
+}
+.vertical-navbar .nav-link {
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+.vertical-navbar .nav-link i {
+    margin-right: 10px;
+}
+.vertical-navbar .nav-link:hover {
+    background-color: #0056b3;
+    color: white;
+    border-radius: 8px;
+}
+.vertical-navbar .nav-link.active {
+    background-color: #004085;
+    color: white;
+    border-radius: 8px;
+}
+.vertical-navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.content-container {
+margin-left: 260px;
+padding: 30px;
+
+}
+.content-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left:10px;
+    margin-top:2px;
+}
+.heade {
+    background: rgb(9, 67, 130);
+    height: 100px;
+    color: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-left: 270px;
+    margin-right: 10px;
+    text-align: center;
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.logo-section a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.logo-section i {
+    font-size: 2rem;
+    color: white;
+    margin-right: 10px;
+}
+.logo-section h4 {
+    color: white;
+    margin: 0;
+}
+hr {
+    border: 1px solid #ffffff;
+    margin: 5px 0;
+}
+.heade {
+    background: rgb(9, 67, 130);
+    height: 100px;
+    color: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-left: 270px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.video {
+    width: 500px;
+    height: 280px;
+    margin-top: 0px;
+    margin-left: 950px;
+    border-radius: 5px;
+}
+.btn-container {
+    position: absolute;
+    top: 160px;
+    left: 260px;
+    width: 300px;
+}
+.btn-container h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.btn-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.btn-container .btn {
+    display: block;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.btn-recommendations {
+    margin-top: 100px;
+    background-color: #17a2b8;
+    color: white;
+}
+.btn-recommendations:hover {
+    background-color: #138496;
+    color: white;
+}
+.btn-analysis {
+    background-color: #17a2b8;
+    color: white;
+}
+.btn-analysis:hover {
+    background-color: #138496;
+    color: white;
+}
+.contrl{
+    margin-left: 300px;
+}
+.icon {
+    width: 50px;
+    border-radius: 40px;
+}
+
+/* Floating Chatbot Icon */
+#chatbotIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s;
+    z-index: 999;
+}
+
+#chatbotIcon:hover {
+    transform: scale(1.1);
+    background-color: #0b5ed7;
+}
+
+/* Chat Window Styling */
+#chatWindow {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 999;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#chatHeader {
+    background-color: #0d6efd;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-box {
+    padding: 15px;
+    max-height: 350px;
+    overflow-y: auto;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column; /* Changed from column-reverse to column */
+}
+
+.bot-message, .user-message {
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    color: #000;
+    text-align: right;
+    margin-left: auto;
+}
+
+#chatFooter {
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    gap: 6px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#sendBtn {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+#sendBtn:hover {
+    background-color: #0b5ed7;
+    color: white;
+    cursor: pointer;
+}
