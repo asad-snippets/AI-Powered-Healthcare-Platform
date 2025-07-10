@@ -1,6 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-GEMINI_API_KEY = "AIzaSyC8f6Jt9S_u5ijM7uLj4CY8AdssALAJH4w"  # Replace with your real API key
+# Specify the path to your .env file
+dotenv_path = 'E:/FYP/Django/Health-Care-Project/.env'
+load_dotenv(dotenv_path)
+
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')  # Make sure your .env file has GEMINI_API_KEY=your_key
 
 def call_gemini_api(messages):
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"

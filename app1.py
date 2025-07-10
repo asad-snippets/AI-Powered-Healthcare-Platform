@@ -3,12 +3,15 @@ import streamlit as st
 from streamlit_chat import message
 import requests
 import json
-
+from dotenv import load_dotenv
 # === Configuration ===
 st.set_page_config(page_title="Health Care Assistant", page_icon="💊", layout="wide")
 st.title("Health Care Assistant Bot")
 
-GEMINI_API_KEY = "AIzaSyC8f6Jt9S_u5ijM7uLj4CY8AdssALAJH4w"  # Replace with your actual API key
+dotenv_path = 'E:/FYP/Django/Health-Care-Project/.env'
+load_dotenv(dotenv_path)
+
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY') 
 
 # === Initialize session state ===
 if 'generated' not in st.session_state:
