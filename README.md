@@ -25,3 +25,17 @@ All modules (login, disease prediction, chatbot, etc.) were rigorously tested (s
 ## Future Scope  
 Integration with wearable devices for real-time health tracking.  
 
+## 🖼️ Project Screenshots
+
+### 👤 Profile Page
+![Profile Page](Screenshots/profile.jpg)
+
+### 📊 Dashboard
+![Dashboard](Screenshots/Dashboard.jpg)
+
+### 🧠 Disease Prediction
+![Disease Prediction](Screenshots/Disease_prediction_1.jpg)
+
+### 🏠 Home Page
+![Home Page](Screenshots/home.png)
+
