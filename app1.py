@@ -2,7 +2,7 @@ from itertools import zip_longest
 import streamlit as st
 from streamlit_chat import message
 import requests
-import json
+import json,os
 from dotenv import load_dotenv
 # === Configuration ===
 st.set_page_config(page_title="Health Care Assistant", page_icon="💊", layout="wide")
